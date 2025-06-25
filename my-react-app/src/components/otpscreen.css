@@ -8,11 +8,22 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.description{
+  font-size: 15px;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 50px;
+}
 .otp-page h1 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+  font-size: 50px;
   color: #3CB297;
   font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  margin: 0;
+}
+
+.otp-page p{
+  color: #3CB297; 
 }
 
 .otp-form {
