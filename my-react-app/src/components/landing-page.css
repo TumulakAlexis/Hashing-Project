@@ -1,3 +1,47 @@
-body{
-    background-color: aquamarine;
+/* landing-page.css */
+
+.landing {
+  height: 100vh;
+  width: 100%;
+  background: #0E2E34; /* Dark gradient */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.hero {
+  text-align: center;
+  padding: 20px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  color: #4CBC80;
+  font-weight: 800;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  color: #4CBC80;
+}
+
+.cta-button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  background-color: #4CBC80;
+  border: none;
+  border-radius: 8px;
+  color: #0E2E34;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #0ea5e9;
+  transform: scale(1.1);
+  transition: 300ms ease;
 }

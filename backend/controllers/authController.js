@@ -8,9 +8,13 @@ const transporter = nodemailer.createTransport({
   service: 'Gmail',
   auth: {
     user: process.env.EMAIL,
-    pass: process.env.EMAIL_PASS
-  }
-});
+    pass: process.env.EMAIL_PASS,
+  },
+  tls: {
+    rejectUnauthorized: false, // ✅ TEMP FIX for self-signed certs
+  },
+}); 
+
 
 // Send OTP and store hashed password temporarily
 exports.sendOtp = async (req, res) => {

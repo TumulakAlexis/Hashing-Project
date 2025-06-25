@@ -154,5 +154,10 @@ input {
   font-size: 100px;
 }
 
+.error-message {
+  color: red;
+  font-size: 0.85rem;
+  margin: 5px 0 15px 35px; /* adjust spacing and indent to align under input */
+}
 
 

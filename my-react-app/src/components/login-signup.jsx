@@ -2,9 +2,12 @@ import { useState } from 'react';
 import './login-signup.css';
 import { FiMail, FiLock } from 'react-icons/fi';
 import axios from 'axios';
-import OtpVerification from './otpscreen'; // ✅ Make sure the path is correct
+import OtpVerification from './otpscreen';
+import { useNavigate } from 'react-router-dom';
+import Landing from './landing-page';
 
 function Login() {
+  const navigate = useNavigate();
   const [showSignIn, setShowSignIn] = useState(true);
   const [showOtpPage, setOtpPage] = useState(false);
 
@@ -23,8 +26,8 @@ function Login() {
         password,
       });
       console.log('✅ Login successful:', res.data);
-      alert(res.data.message);
-      // Optional: Redirect to landing page
+      navigate('/Landing')
+      
     } catch (err) {
       console.error('❌ Login Error:', err);
       alert(err.response?.data?.message || 'Login failed');
