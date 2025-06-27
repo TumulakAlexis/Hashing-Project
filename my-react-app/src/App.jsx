@@ -1,21 +1,25 @@
-import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
-import SplashScreen from './components/splashscreen';
-import Login from './components/login-signup';
-import Landing from './components/landing-page'; // Optional: if you want a landing route
+import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+import Login from "./components/login-signup.jsx";
+import ResetPassword from "./components/reset-password.jsx";
+import Landing from "./components/landing-page.jsx";
+import SplashScreen from "./components/splashscreen.jsx";
+import "./App.css";
 
 function App() {
   const [showSplash, setShowSplash] = useState(true);
 
-  if (showSplash) {
-    return <SplashScreen onFinish={() => setShowSplash(false)} />;
-  }
+  const handleSplashFinish = () => {
+    setShowSplash(false);
+  };
 
-  return (
+  return showSplash ? (
+    <SplashScreen onFinish={handleSplashFinish} />
+  ) : (
     <Routes>
       <Route path="/" element={<Login />} />
+      <Route path="/reset-password/:token" element={<ResetPassword />} />
       <Route path="/landing" element={<Landing />} />
-      {/* Add more routes as needed */}
     </Routes>
   );
 }

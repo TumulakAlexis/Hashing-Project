@@ -160,4 +160,38 @@ input {
   margin: 5px 0 15px 35px; /* adjust spacing and indent to align under input */
 }
 
+.forgot-password {
+  text-align: right;
+  margin-bottom: 15px;
+}
 
+.forgot-link {
+  background: none;
+  border: none;
+  color: #007bff;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.forgot-link:hover {
+  color: #0056b3;
+}
+
+.forgot-password {
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.forgot-link {
+  background: none;
+  border: none;
+  color: #3CB297;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.forgot-link:hover {
+  color: #666;
+}
